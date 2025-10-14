@@ -1,1 +1,129 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form-control {
+  width: 194px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.carousel-inner {
+  margin: auto;
+  padding: 30px;
+  width: 100%;
+  max-width: 1320px;
+  box-sizing: border-box;
+}
+
+.slick-prev:before, .slick-next:before {
+  border-radius: 50%;
+  border: 0.1px solid #0d6efd;
+  opacity: 1;
+  background-color: white;
+}
+
+.slick-next {
+  right: 32px;
+}
+
+.slick-prev {
+  left: 10px;
+  z-index: 1;
+}
+
+.slick-next:before {
+  content: url(assets/images/next.png);
+  padding: 8px;
+}
+
+.slick-prev:before {
+  padding: 8px;
+  content: url(assets/images/prev.png);
+}
+
+.slick-dots li.slick-active button:before, .slick-dots li button:before {
+  color: transparent;
+}
+
+
+.accordion .accordion-item {
+  border: none;
+  margin: 0 0 10px 0;
+}
+
+.accordion .ui-accordion-header {
+  padding: 25px;
+  background-color: #0d6efd;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.accordion .ui-accordion-content {
+  padding: 25px;
+  border: none;
+}
+
+.accordion .ui-accordion-header {
+  position: relative;
+}
+
+.accordion .ui-accordion-header-icon {
+  content: '';
+  position: absolute;
+  top: 35px;
+  right: 28px;
+  display: inline-block;
+  width: 20px;
+  height: 13px;
+  background: url(assets/images/VectorDown.png) 50% 50% no-repeat;
+}
+
+.accordion .ui-accordion-header-active .ui-accordion-header-icon {
+  background-image: url(assets/images/VectorUp.png);
+}
+
+
+.popUp {
+  display: none;
+}
+
+
+.btn:hover {
+  border: 1px solid transparent;
+  color: black;
+  outline: none;
+}
+
+.hvr-sweep-to-left:before {
+  background-color: #ffd89d;
+  border: #ffd89d;
+}
+
+.btn:focus {
+  border: 1px solid transparent;
+  color: white;
+  background-color: #ffd89d;
+}
+
+
+.burger {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+
+.overflow {
+  overflow: hidden;
+}

@@ -1,0 +1,59 @@
+.accordion-header {
+  color: white;
+  padding: 25px 25px 25px 23px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.accordion-body {
+  transition: all 0.3s ease;
+  padding: 16px 23px 25px 23px;
+}
+
+.popUp {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(70deg, #fc9435, #edc645);
+  color: white;
+  border-radius: 10px;
+  z-index: 1000;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.text-popUp {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  color: white;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+  color: black;
+}
+
+
+
+

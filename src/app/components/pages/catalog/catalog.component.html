@@ -1,0 +1,30 @@
+<main class="mt-5 wow animate__fadeInRight">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Наши чайные коллекции</h2>
+    <div class="row g-4 row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+
+      <div class="col" *ngFor="let tea of teas">
+        <div class="border border-light-subtle">
+          <a (click)="openImage(tea.image)" class="zoom-gallery">
+            <img [src]="tea.image" class="w-100" alt="{{ tea.id }}">
+          </a>
+          <div class="info p-3 pb-3">
+            <h5 class="fw-bold">{{ tea.title }}</h5>
+            <h6 class="mb-3 description">{{ tea.description | shortText}} </h6>
+            <button type="button" class="btn btn-primary d-grid gap-2 col-6 hvr-sweep-to-left" [routerLink]="['/catalog', tea.id]">
+              Подробнее
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox" *ngIf="selectedImage" (click)="closeImage()">
+    <img [src]="selectedImage" alt="Изображение" class="lightbox-img" />
+    <button class="close-btn" (click)="closeImage($event)">×</button>
+  </div>
+
+</main>
+
+<app-loader *ngIf="loading"></app-loader>

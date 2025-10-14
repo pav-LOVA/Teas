@@ -1,0 +1,38 @@
+<section class="mt-5 mb-5 wow animate__fadeInLeft">
+  <div class="container">
+    <div class="carousel ">
+
+      <ngx-slick-carousel class="carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+          <img [src]="slide.img" alt="slide" />
+        </div>
+      </ngx-slick-carousel>
+    </div>
+
+  </div>
+</section>
+<section class="mt-5 mb-5 wow animate__fadeInLeft">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Ответы на часто задаваемые вопросы</h2>
+
+    <div class="accordion container-xl w-75">
+      <div class="accordion-item" *ngFor="let item of items; let i = index">
+        <div class="accordion-header bg-primary" (click)="accordion(i)" [class.active]="activeIndex === i">
+          {{ item.title }}
+        </div>
+        <div class="accordion-body" *ngIf="activeIndex === i">
+          {{ item.content }}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div *ngIf="showPopup" class="popUp">
+  <div class="container">
+    <button class="close-btn" (click)="closePopup()">x</button>
+    <div class="text-popUp">Посмотрите наши чайные коллекции</div>
+    <div class="btn btn-danger d-grid" routerLink="/catalog">Смотреть</div>
+  </div>
+</div>

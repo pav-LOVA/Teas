@@ -28,9 +28,21 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/jquery-ui-dist/jquery-ui.min.css",
+              "node_modules/slick-carousel/slick/slick.css",
+              "node_modules/slick-carousel/slick/slick-theme.css",
+              "src/styles/animate.min.css",
+              "src/styles/hover-min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js",
+              "node_modules/jquery-ui-dist/jquery-ui.min.js",
+              "src/scripts/wow.min.js"
+            ]
           },
           "configurations": {
             "production": {
