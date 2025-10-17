@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {SearchService} from "../../../services/search.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -6,6 +8,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  public searchValue = '';
 
   isMenuOpen = false;
 
@@ -17,12 +21,23 @@ export class HeaderComponent implements OnInit {
     this.isMenuOpen = false;
   }
 
-  constructor() {
-
+  constructor(private router: Router,
+              private searchService: SearchService) {
   }
 
   ngOnInit(): void {
+    this.searchValue = this.searchService.currentSearch;
+  }
 
+  onSearch() {
+    this.searchService.setSearch(this.searchValue.trim());
+    this.router.navigate(['/catalog']);
+  }
+
+  clearSearch() {
+    this.searchValue = '';
+    this.searchService.clearSearch();
+    this.router.navigate(['/catalog']);
   }
 
 }

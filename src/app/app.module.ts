@@ -10,7 +10,7 @@ import { OrderComponent } from './components/pages/order/order.component';
 import { HeaderComponent } from './components/common/header/header.component';
 import { FooterComponent } from './components/common/footer/footer.component';
 import { ErrorComponent } from './components/common/error/error.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { MainLayoutComponent } from './components/common/layout/main-layout/main-layout.component';
 import { EmptyLayoutComponent } from './components/common/layout/empty-layout/empty-layout.component';
@@ -38,6 +38,7 @@ import { ShortTextPipe } from './pipes/short-text.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     LightboxModule,

@@ -4,13 +4,13 @@
     <div class="row g-4 row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
       <div class="container w-75">
         <div class="tea-card">
-          <img src="{{ tea.image }}" class="w-50" alt="...">
+          <img src="{{ tea.image }}" class="w-50">
           <div class="info p-3 pb-3">
             <h5 class="fw-bold">{{ tea.title }}</h5>
             <h6 class="fw-bold mb-3">{{ tea.price }} ₽</h6>
             <h6 class="mb-3">{{ tea.description }}</h6>
-<!--                        <button type="button" class="btn btn-primary d-grid gap-2 col-6 hvr-sweep-to-left" routerLink="/order" (click)="goToOrder(tea)">-->
-            <button type="button" class="btn btn-primary d-grid gap-2 col-6 hvr-sweep-to-left" routerLink="/order" [queryParams]="{product: tea.title, price: tea.price}">
+            <button type="button" class="btn btn-primary d-grid gap-2 col-6 hvr-sweep-to-left" routerLink="/order"
+                    [queryParams]="{product: tea.title, price: tea.price}">
               Купить
             </button>
           </div>

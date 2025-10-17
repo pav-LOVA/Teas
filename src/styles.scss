@@ -1,11 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
+  flex-direction: column;
+  height: 100%;
 }
 
-.form-control {
-  width: 194px;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+  text-align: center;
 }
 
 a {
@@ -51,51 +73,10 @@ a {
   color: transparent;
 }
 
-
 .accordion .accordion-item {
   border: none;
   margin: 0 0 10px 0;
 }
-
-.accordion .ui-accordion-header {
-  padding: 25px;
-  background-color: #0d6efd;
-  cursor: pointer;
-  outline: none;
-  color: white;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
-.accordion .ui-accordion-content {
-  padding: 25px;
-  border: none;
-}
-
-.accordion .ui-accordion-header {
-  position: relative;
-}
-
-.accordion .ui-accordion-header-icon {
-  content: '';
-  position: absolute;
-  top: 35px;
-  right: 28px;
-  display: inline-block;
-  width: 20px;
-  height: 13px;
-  background: url(assets/images/VectorDown.png) 50% 50% no-repeat;
-}
-
-.accordion .ui-accordion-header-active .ui-accordion-header-icon {
-  background-image: url(assets/images/VectorUp.png);
-}
-
-
-.popUp {
-  display: none;
-}
-
 
 .btn:hover {
   border: 1px solid transparent;
@@ -114,7 +95,6 @@ a {
   background-color: #ffd89d;
 }
 
-
 .burger {
   display: none;
 }
@@ -122,7 +102,6 @@ a {
 .close {
   display: none;
 }
-
 
 .overflow {
   overflow: hidden;
