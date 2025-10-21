@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/teas",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -32,6 +32,8 @@
               "node_modules/jquery-ui-dist/jquery-ui.min.css",
               "node_modules/slick-carousel/slick/slick.css",
               "node_modules/slick-carousel/slick/slick-theme.css",
+              "src/styles/animate.min.css",
+              "src/styles/hover-min.css",
               "src/styles.scss"
             ],
             "scripts": [
