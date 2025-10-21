@@ -1,4 +1,4 @@
-<div class="order mt-5 mb-5 wow animate__fadeInRight">
+<div class="order mt-5 wow animate__fadeInRight">
   <div class="container-sm">
     <h2 class="fw-bold text-center mb-5" *ngIf="!orderSuccess">Сделать заказ</h2>
     <div class="form-container" *ngIf="orderSuccess">
@@ -6,35 +6,47 @@
         Спасибо за заказ!
       </h2>
     </div>
-    <form class="container w-50" [formGroup]="checkoutForm" novalidate *ngIf="!orderSuccess">
+    <form class="container w-50" [formGroup]="checkoutForm" novalidate *ngIf="!orderSuccess" (ngSubmit)="createOrder()">
       <div class="row g-3 row-cols-1 row-cols-sm-1 row-cols-lg-3">
         <div class="col mb-3">
           <label for="nameInput" class="form-label">Имя</label>
           <input type="text" class="form-control w-100" id="nameInput" formControlName="name">
-          <div *ngIf="(checkoutForm.get('name')?.touched || checkoutForm.get('name')?.dirty) && checkoutForm.get('name')?.errors?.['pattern']" class="text-danger">
+          <div
+            *ngIf="(checkoutForm.get('name')?.touched || checkoutForm.get('name')?.dirty) && checkoutForm.get('name')?.errors?.['pattern']"
+            class="text-danger">
             Поле обязательно для заполнения
           </div>
-          <div *ngIf="(checkoutForm.get('name')?.touched || checkoutForm.get('name')?.dirty) && checkoutForm.get('name')?.invalid" class="text-danger">
+          <div
+            *ngIf="(checkoutForm.get('name')?.touched || checkoutForm.get('name')?.dirty) && checkoutForm.get('name')?.invalid"
+            class="text-danger">
             Поле должно содержать только буквы
           </div>
         </div>
         <div class="col mb-3">
           <label for="surnameInput" class="form-label">Фамилия</label>
           <input type="text" class="form-control w-100" id="surnameInput" formControlName="lastName">
-          <div *ngIf="(checkoutForm.get('lastName')?.touched || checkoutForm.get('lastName')?.dirty) && checkoutForm.get('lastName')?.errors?.['pattern']" class="text-danger">
+          <div
+            *ngIf="(checkoutForm.get('lastName')?.touched || checkoutForm.get('lastName')?.dirty) && checkoutForm.get('lastName')?.errors?.['pattern']"
+            class="text-danger">
             Поле обязательно для заполнения
           </div>
-          <div *ngIf="(checkoutForm.get('lastName')?.touched || checkoutForm.get('lastName')?.dirty) && checkoutForm.get('lastName')?.invalid" class="text-danger">
+          <div
+            *ngIf="(checkoutForm.get('lastName')?.touched || checkoutForm.get('lastName')?.dirty) && checkoutForm.get('lastName')?.invalid"
+            class="text-danger">
             Поле должно содержать только буквы
           </div>
         </div>
         <div class="col mb-3">
           <label for="phoneInput" class="form-label">Телефон</label>
           <input type="text" class="form-control w-100" id="phoneInput" formControlName="phone">
-          <div *ngIf="(checkoutForm.get('phone')?.touched || checkoutForm.get('phone')?.dirty) && checkoutForm.get('phone')?.errors?.['pattern']" class="text-danger">
+          <div
+            *ngIf="(checkoutForm.get('phone')?.touched || checkoutForm.get('phone')?.dirty) && checkoutForm.get('phone')?.errors?.['pattern']"
+            class="text-danger">
             Поле обязательно для заполнения
           </div>
-          <div *ngIf="(checkoutForm.get('phone')?.touched || checkoutForm.get('phone')?.dirty) && checkoutForm.get('phone')?.invalid" class="text-danger">
+          <div
+            *ngIf="(checkoutForm.get('phone')?.touched || checkoutForm.get('phone')?.dirty) && checkoutForm.get('phone')?.invalid"
+            class="text-danger">
             Поле должно содержать 11 цифр
           </div>
         </div>
@@ -43,14 +55,18 @@
         <div class="col mb-3">
           <label for="countryInput" class="form-label">Страна</label>
           <input type="text" class="form-control w-100" id="countryInput" formControlName="country">
-          <div *ngIf="(checkoutForm.get('country')?.touched || checkoutForm.get('country')?.dirty) && checkoutForm.get('country')?.invalid" class="text-danger">
+          <div
+            *ngIf="(checkoutForm.get('country')?.touched || checkoutForm.get('country')?.dirty) && checkoutForm.get('country')?.invalid"
+            class="text-danger">
             Поле обязательно для заполнения
           </div>
         </div>
         <div class="col mb-3">
           <label for="indexInput" class="form-label">Индекс</label>
           <input type="text" class="form-control w-100" id="indexInput" formControlName="zip">
-          <div *ngIf="(checkoutForm.get('zip')?.touched || checkoutForm.get('zip')?.dirty) && checkoutForm.get('zip')?.invalid" class="text-danger">
+          <div
+            *ngIf="(checkoutForm.get('zip')?.touched || checkoutForm.get('zip')?.dirty) && checkoutForm.get('zip')?.invalid"
+            class="text-danger">
             Поле обязательно для заполнения
           </div>
         </div>
@@ -59,10 +75,14 @@
         <div class="col mb-3">
           <label for="addressInput" class="form-label">Адрес</label>
           <input type="text" class="form-control w-100" id="addressInput" formControlName="address">
-          <div *ngIf="(checkoutForm.get('address')?.touched || checkoutForm.get('address')?.dirty) && checkoutForm.get('address')?.errors?.['pattern']" class="text-danger">
+          <div
+            *ngIf="(checkoutForm.get('address')?.touched || checkoutForm.get('address')?.dirty) && checkoutForm.get('address')?.errors?.['pattern']"
+            class="text-danger">
             Поле обязательно для заполнения
           </div>
-          <div *ngIf="(checkoutForm.get('address')?.touched || checkoutForm.get('address')?.dirty) && checkoutForm.get('address')?.invalid" class="text-danger">
+          <div
+            *ngIf="(checkoutForm.get('address')?.touched || checkoutForm.get('address')?.dirty) && checkoutForm.get('address')?.invalid"
+            class="text-danger">
             Поле должно содержать только буквы, цифры, пробел, дефис и /
           </div>
         </div>
@@ -83,7 +103,9 @@
           <input type="text" class="form-control w-100" id="commentInput" formControlName="comment">
         </div>
       </div>
-      <button type="button" class="btn btn-primary hvr-sweep-to-left m-2" id="button" (click)="createOrder()">Отправить</button>
+      <button class="btn btn-primary hvr-sweep-to-left m-2" id="button"
+              [disabled]="checkoutForm.invalid || checkoutForm.disabled">Отправить
+      </button>
       <span *ngIf="orderError" class="text-danger">Произошла ошибка. Попробуйте еще раз.</span>
     </form>
   </div>

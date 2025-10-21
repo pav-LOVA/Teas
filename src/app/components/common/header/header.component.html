@@ -37,8 +37,13 @@
     </div>
     <div class="search">
       <label class="row g-2 search-input">
-        <input type="text" placeholder="Поиск чая" class="col-auto me-2 form-control">
-        <button type="button" class="btn-search col-auto btn btn-outline-primary">Найти</button>
+        <input type="text" placeholder="Поиск чая" class="col-auto me-2 form-control" [(ngModel)]="searchValue">
+        <button type="button" class="btn-search col-auto btn btn-outline-primary" (click)="onSearch()">
+          Найти
+        </button>
+        <button *ngIf="searchValue" type="button" class="btn btn-outline-secondary col-auto" (click)="clearSearch()">
+          Сброс
+        </button>
       </label>
     </div>
   </div>

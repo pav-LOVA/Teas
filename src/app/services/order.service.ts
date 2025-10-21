@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {OrderDataType} from "../types/order-data.type";
 
 @Injectable({
   providedIn: 'root'
@@ -12,16 +13,7 @@ export class OrderService {
   constructor(private http: HttpClient) {
   }
 
-  createOrder(data: {
-    name: string;
-    last_name: string;
-    phone: string;
-    country: string;
-    zip: number;
-    address: string;
-    product: string;
-    comment?: string;
-  }) {
+  createOrder(data: OrderDataType) {
     return this.http.post<{ success: boolean, message?: string }>(`https://testologia.ru/order-tea`, data)
   }
 
