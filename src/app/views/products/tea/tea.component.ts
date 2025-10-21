@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {TeaType} from "../../../types/tea.type";
-import {TeasService} from "../../../services/teas.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {OrderService} from "../../../services/order.service";
+import {TeaType} from "../../../../types/tea.type";
+import {TeasService} from "../../../shared/services/teas.service";
+import {OrderService} from "../../../shared/services/order.service";
 
 @Component({
   selector: 'app-tea',

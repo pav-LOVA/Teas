@@ -1,9 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription, tap } from 'rxjs';
-import { TeaType } from '../../../types/tea.type';
-import { TeasService } from '../../../services/teas.service';
-import { SearchService } from '../../../services/search.service';
+import {TeaType} from "../../../../types/tea.type";
+import {TeasService} from "../../../shared/services/teas.service";
+import {SearchService} from "../../../shared/services/search.service";
+
 
 @Component({
   selector: 'app-catalog',

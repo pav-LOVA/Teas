@@ -40,8 +40,7 @@
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/slick-carousel/slick/slick.min.js",
-              "node_modules/jquery-ui-dist/jquery-ui.min.js",
-              "src/scripts/wow.min.js"
+              "node_modules/jquery-ui-dist/jquery-ui.min.js"
             ]
           },
           "configurations": {
@@ -49,8 +48,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
